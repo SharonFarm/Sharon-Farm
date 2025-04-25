@@ -8,12 +8,14 @@ public_folder: "/images/uploads"
 collections:
   - name: "projects"
     label: "Projects"
-    file: "data/projects.json"  # Single file instead of folder
+    folder: "data/projects"  # For individual files
+    create: true
+    slug: "{{slug}}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Partner", name: "partner", widget: "string"}
-      - label: "Gallery"
+      - label: "Gallery Images"
         name: "gallery"
         widget: "list"
         field: {label: "Image", name: "image", widget: "image"}
