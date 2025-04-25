@@ -2,23 +2,18 @@ backend:
   name: git-gateway
   branch: main
 
-# Media storage
-media_folder: "static/images/uploads"  # Where uploaded files go
-public_folder: "/images/uploads"      # Public path for files
-media_library: 
-  name: uploadcare  # Or 'cloudinary' if you prefer
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
-# Content collections
 collections:
   - name: "projects"
     label: "Projects"
-    folder: "data/projects"
-    create: true
+    file: "data/projects.json"  # Changed from folder: to file:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "markdown"}
       - {label: "Partner", name: "partner", widget: "string"}
-      - label: "Gallery Images"
+      - label: "Gallery"
         name: "gallery"
         widget: "list"
         field: {label: "Image", name: "image", widget: "image"}
