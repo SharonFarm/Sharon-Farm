@@ -20,9 +20,14 @@ document.querySelectorAll(".nav-link").forEach(link => {
 // NEW: Fetch projects from single JSON file
 document.addEventListener('DOMContentLoaded', function() {
     // First load the projects index
+    //clear
+    const container = document.querySelector('.projects-section');
+    container.innerHTML = '';
+
     fetch('/data/projects.json')
         .then(res => res.json())
         .then(projects => {
+            console.log('Loaded projects:', projects);
             const container = document.querySelector('.projects-section');
             
             projects.forEach(project => {
