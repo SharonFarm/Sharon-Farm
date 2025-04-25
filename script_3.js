@@ -1,4 +1,4 @@
-// Mobile Menu Toggle (keep existing code)
+// Mobile Menu Toggle (keep existing)
 const menuOpenButton = document.querySelector("#menu-open-button");
 const menuCloseButton = document.querySelector("#menu-close-button");
 
@@ -10,25 +10,31 @@ menuCloseButton.addEventListener("click", () => {
     document.body.classList.remove("show-mobile-menu");
 });
 
-// Close menu when clicking on a nav link (keep existing code)
+// Close menu on nav link click (keep existing)
 document.querySelectorAll(".nav-link").forEach(link => {
     link.addEventListener("click", () => {
         document.body.classList.remove("show-mobile-menu");
     });
 });
 
-// NEW: Fetch projects from single JSON file
+// Project Loading - NEW IMPROVED VERSION
 document.addEventListener('DOMContentLoaded', function() {
-    // First load the projects index
-    //clear
     const container = document.querySelector('.projects-section');
-    container.innerHTML = '';
-
+    
+    // First clear ONLY project cards (preserve section title)
+    const existingCards = container.querySelectorAll('.project-card');
+    existingCards.forEach(card => card.remove());
+    
+    // Then load fresh data
     fetch('/data/projects.json')
-        .then(res => res.json())
+        .then(res => {
+            if (!res.ok) throw new Error('Network response was not ok');
+            return res.json();
+        })
         .then(projects => {
-            console.log('Loaded projects:', projects);
-            const container = document.querySelector('.projects-section');
+            if (!Array.isArray(projects)) {
+                throw new Error('Invalid projects data format');
+            }
             
             projects.forEach(project => {
                 const projectCard = document.createElement('div');
@@ -57,7 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 container.appendChild(projectCard);
                 
-                // Initialize Swiper
                 new Swiper(projectCard.querySelector('.swiper'), {
                     loop: true,
                     pagination: {
@@ -71,5 +76,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
             });
         })
-        .catch(error => console.error('Error loading projects:', error));
+        .catch(error => {
+            console.error('Error loading projects:', error);
+            // Optional: Display error message to user
+            container.innerHTML += `<p class="error">Failed to load projects. Please refresh the page.</p>`;
+        });
 });
