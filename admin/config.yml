@@ -1,61 +1,27 @@
 backend:
   name: git-gateway
-  branch: main
+  branch: main  # Your GitHub branch
 
+# Media folder (for image uploads)
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
   - name: "products"
     label: "Products"
-    folder: "data/products"
+    folder: "data/products"  # Stores product JSON files
     create: true
-    slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Product Name", widget: "string" }
+      - { name: "title", label: "Title", widget: "string" }
       - { name: "scientific_name", label: "Scientific Name", widget: "string" }
-      - {
-          name: "category",
-          label: "Category",
-          widget: "select",
-          options: ["Plant-Based", "Livestock-Based", "Process-Based"],
-        }
-
-      # Image gallery
-      - name: "images"
-        label: "Product Images"
-        widget: "list"
-        field: { name: "image", label: "Image", widget: "image" }
-
-      # Product details
-      - name: "details"
-        label: "Product Details"
-        widget: "object"
-        fields:
-          - {
-              name: "lifespan",
-              label: "Lifespan/Growing Period",
-              widget: "text",
-            }
-          - {
-              name: "environment",
-              label: "Environmental Benefits",
-              widget: "text",
-            }
-          - { name: "health", label: "Health Benefits", widget: "text" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "image", label: "Image", widget: "image" }
 
   - name: "projects"
     label: "Projects"
-    folder: "data/projects"
+    folder: "data/projects"  # Stores project JSON files
     create: true
-    slug: "{{slug}}"
     fields:
-      - { name: "title", label: "Project Title", widget: "string" }
-      - { name: "description", label: "Description", widget: "text" }
-      - { name: "partner", label: "Partner Organization", widget: "string" }
-
-      # Project gallery
-      - name: "gallery"
-        label: "Project Images"
-        widget: "list"
-        field: { name: "image", label: "Image", widget: "image" }
+      - { name: "title", label: "Title", widget: "string" }
+      - { name: "description", label: "Description", widget: "markdown" }
+      - { name: "images", label: "Gallery", widget: "list", field: { name: "image", label: "Image", widget: "image" } }
