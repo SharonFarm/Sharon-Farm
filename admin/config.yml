@@ -1,27 +1,19 @@
 backend:
   name: git-gateway
-  branch: main  # Your GitHub branch
+  branch: main
 
-# Media folder (for image uploads)
 media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-  - name: "products"
-    label: "Products"
-    folder: "data/products"  # Stores product JSON files
-    create: true
-    fields:
-      - { name: "title", label: "Title", widget: "string" }
-      - { name: "scientific_name", label: "Scientific Name", widget: "string" }
-      - { name: "description", label: "Description", widget: "markdown" }
-      - { name: "image", label: "Image", widget: "image" }
-
   - name: "projects"
     label: "Projects"
-    folder: "data/projects"  # Stores project JSON files
-    create: true
+    file: "data/projects.json"  # Single file instead of folder
     fields:
-      - { name: "title", label: "Title", widget: "string" }
+      - { name: "title", label: "Title" }
       - { name: "description", label: "Description", widget: "markdown" }
-      - { name: "images", label: "Gallery", widget: "list", field: { name: "image", label: "Image", widget: "image" } }
+      - { name: "partner", label: "Partner" }
+      - label: "Gallery Images"
+        name: "gallery"
+        widget: "list"
+        field: { name: "image", label: "Image", widget: "image" }

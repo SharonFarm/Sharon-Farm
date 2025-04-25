@@ -1,0 +1,60 @@
+[
+    {
+        "title": "Community Model Farm - GrowQC Food Security Program",
+        "description": "Sharon Farm supports local feeding programs as part of the Barangay Kontra Gutom campaign under the GrowQC Food Security Program",
+        "partner": "Quezon City Government",
+        "gallery": [
+            {"image": "/images/Projects/Project1/project1_p1.jpg"},
+            {"image": "/images/Projects/Project1/project1_p2.jpg"},
+            {"image": "/images/Projects/Project1/project1_p3.jpg"},
+            {"image": "/images/Projects/Project1/project1_p4.jpg"},
+            {"image": "/images/Projects/Project1/project1_p5.jpg"},
+            {"image": "/images/Projects/Project1/project1_p6.jpg"},
+            {"image": "/images/Projects/Project1/project1_p7.jpg"},
+            {"image": "/images/Projects/Project1/project1_p8.jpg"},
+            {"image": "/images/Projects/Project1/project1_p9.jpg"}
+        ]
+    },
+    {
+        "title": "Integration of Modern Farming Techniques",
+        "description": "Sharon Farm uses drip irrigation, aquaponics, and composing biodigesters to promote sustainable and efficient urban farming.",
+        "partner": "Quezon City Government",
+        "gallery": [
+            {"image": "/images/Projects/Project2/project2_p1.jpg"},
+            {"image": "/images/Projects/Project2/project2_p2.jpg"},
+            {"image": "/images/Projects/Project2/project2_p3.jpg"},
+            {"image": "/images/Projects/Project2/project2_p4.jpg"},
+            {"image": "/images/Projects/Project2/project2_p5.jpg"},
+            {"image": "/images/Projects/Project2/project2_p6.jpg"},
+            {"image": "/images/Projects/Project2/project2_p7.jpg"},
+            {"image": "/images/Projects/Project2/project2_p8.jpg"}
+        ]
+    },
+    {
+        "title": "Livelihood and Skills Training Programs",
+        "description": "Sharon Farm offers training in composting and the Kadiwa Palit Kalakal system, empowering individuals through sustainable urban agriculture practices.",
+        "partner": "Various Organizations",
+        "gallery": [
+            {"image": "/images/Projects/Project3/project3_p1.jpg"},
+            {"image": "/images/Projects/Project3/project3_p2.jpg"},
+            {"image": "/images/Projects/Project3/project3_p3.jpg"},
+            {"image": "/images/Projects/Project3/project3_p4.jpg"},
+            {"image": "/images/Projects/Project3/project3_p5.jpg"},
+            {"image": "/images/Projects/Project3/project3_p6.jpg"},
+            {"image": "/images/Projects/Project3/project3_p7.jpg"}
+        ]
+    },
+    {
+        "title": "Community Engagement and Educational Activities",
+        "description": "Sharon Farm hosts community events and educational programs, offering students hands-on experiences in sustainable urban agriculture practices.",
+        "partner": "Quezon City University",
+        "gallery": [
+            {"image": "/images/Projects/Project4/project4_p1.jpg"},
+            {"image": "/images/Projects/Project4/project4_p2.jpg"},
+            {"image": "/images/Projects/Project4/project4_p3.jpg"},
+            {"image": "/images/Projects/Project4/project4_p4.jpg"},
+            {"image": "/images/Projects/Project4/project4_p5.jpg"},
+            {"image": "/images/Projects/Project4/project4_p6.jpg"}
+        ]
+    }
+]
