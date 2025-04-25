@@ -4,6 +4,13 @@
     "partner": "Quezon City Government",
     "gallery": [
       {"image": "/images/Projects/Project1/project1_p1.jpg"},
-      {"image": "/images/Projects/Project1/project1_p2.jpg"}
+      {"image": "/images/Projects/Project1/project1_p2.jpg"},
+      {"image": "/images/Projects/Project1/project1_p3.jpg"},
+      {"image": "/images/Projects/Project1/project1_p4.jpg"},
+      {"image": "/images/Projects/Project1/project1_p5.jpg"},
+      {"image": "/images/Projects/Project1/project1_p6.jpg"},
+      {"image": "/images/Projects/Project1/project1_p7.jpg"},
+      {"image": "/images/Projects/Project1/project1_p8.jpg"},
+      {"image": "/images/Projects/Project1/project1_p9.jpg"}
     ]
   }
