@@ -1,1 +1,15 @@
-
+{
+    "title": "Integration of Modern Farming Techniques",
+    "description": "Sharon farm uses drip irrigation, aquaponics, and composting diodigesters to promote sustainable and efficient urban farming.",
+    "partner": "Quezon City Government",
+    "gallery": [
+      {"image": "/images/Projects/Project1/project2_p1.jpg"},
+      {"image": "/images/Projects/Project1/project2_p2.jpg"},
+      {"image": "/images/Projects/Project1/project2_p3.jpg"},
+      {"image": "/images/Projects/Project1/project2_p4.jpg"},
+      {"image": "/images/Projects/Project1/project2_p5.jpg"},
+      {"image": "/images/Projects/Project1/project2_p6.jpg"},
+      {"image": "/images/Projects/Project1/project2_p7.jpg"},
+      {"image": "/images/Projects/Project1/project2_p8.jpg"}
+    ]
+  }
